@@ -45,6 +45,22 @@ nav a:hover{
     transition: transform 0.1s;
 }
 
+.graficos-container {
+    margin: 5rem;  
+}
+
+.graficos-container__texto{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2rem;
+    border: solid var(--cor-primaria);
+}
+
+span {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
 footer{
     display: flex;
     align-items: center;
