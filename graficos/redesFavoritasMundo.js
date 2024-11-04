@@ -10,12 +10,12 @@ async function redesFavoritasMundo() {
 
     const data = [
         {
-            values: valores,
-            labels: redes,
-            type: 'pie',
-            textinfo: 'label+percent'
+          values: '',
+          labels: '',
+          type: 'pie',
+          textinfo: 'label+percent'
         }
-    ]
+      ]
 
     const layout = {
         plot_bgcolor: getCSS('--cor-de-fundo'),
