@@ -1,4 +1,4 @@
-import { getCSS, tickconfig, criarGrafico} from "./common.js"
+import { getCSS, tickConfig, criarGrafico } from "./common.js"
 
 async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
@@ -22,39 +22,37 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Quantidade de usuários por rede (Milhões)',
+            text: 'Redes sociais com mais usuários no mundo',
+            x: 0,
             font: {
                 color: getCSS('--cor-primaria'),
                 family: getCSS('--font'),
-                size: 25     
+                size: 30
             }
         },
         xaxis: {
-            tickfont: tickconfig,
+            tickfont: tickConfig,
             title: {
-                text: 'Nome das Redes',
+                text: 'nome das redes sociais',
                 font: {
                     color: getCSS('--cor-primaria'),
-                    family: getCSS('--font'),
-                    size: 20, 
+                    family: getCSS('--font')
                 }
             }
         },
         yaxis: {
-            tickfont: tickconfig,
+            tickfont: tickConfig,
             title: {
-                text: 'Milhões de usuários ativos',
+                text: 'bilhões de usuários ativos',
                 font: {
-                    color: getCSS('--cor-primaria'),
-                    family: getCSS('--font'),
-                    size: 20,
+                    color: getCSS('--cor-primaria')
                 }
             }
-        },
+        }
+
     }
 
     criarGrafico(data, layout)
-
 }
 
 quantidadeUsuariosPorRede()
